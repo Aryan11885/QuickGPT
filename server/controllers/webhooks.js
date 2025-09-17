@@ -1,5 +1,5 @@
 import Stripe from "stripe"
-import Transaction from "../models/transaction.js";
+import Transaction from "../models/Transaction.js";
 import User from "../models/user.js";
 
 export const stripeWebhooks = async (request, response) => {
