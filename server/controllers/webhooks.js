@@ -23,7 +23,7 @@ export const stripeWebhooks = async (request, response) => {
         })
 
         const session = sessionList.data[0];
-        const {transaction, appId} = session.metadata;
+        const {transactionId, appId} = session.metadata;
 
         if(appId === "quickgpt") {
           const transaction = await Transaction.findOne({_id: transactionId, isPaid: false})
